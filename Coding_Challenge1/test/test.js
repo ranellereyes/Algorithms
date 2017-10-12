@@ -1,7 +1,12 @@
-var assert = require('assert');
+// var assert = require('assert');
+import assert from 'assert';
+import queue from '../queue.js';
+
+
 describe('Testing', function() {
   describe('Queue', function() {
     it('should store an array once initialized', function() {
+
       assert.equal(true, false);
     });
 

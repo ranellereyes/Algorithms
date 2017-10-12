@@ -1,4 +1,4 @@
-class Queue {
+export default class Queue {
   constructor(init_window) {
     this.queue = [];
   }
@@ -24,3 +24,5 @@ class Queue {
     // Updates subrange sums once something is enqueued
   }
 }
+
+// module.exports = Queue;
