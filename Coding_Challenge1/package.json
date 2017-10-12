@@ -1,0 +1,19 @@
+{
+  "name": "coding_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranellereyes/Algorithms.git"
+  },
+  "author": "Ranelle Reyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranellereyes/Algorithms/issues"
+  },
+  "homepage": "https://github.com/ranellereyes/Algorithms#readme"
+}
