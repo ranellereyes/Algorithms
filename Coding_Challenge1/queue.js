@@ -1,6 +1,8 @@
 export default class Queue {
   constructor(init_window) {
-    this.queue = [];
+    this.queue = init_window.map(el => {
+      return { value: el, subrange_sum: 0 }; 
+    });
   }
 
   dequeue() {

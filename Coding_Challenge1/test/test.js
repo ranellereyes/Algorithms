@@ -1,17 +1,17 @@
 // var assert = require('assert');
 import assert from 'assert';
-import queue from '../queue.js';
-
+import Queue from '../queue.js';
 
 describe('Testing', function() {
   describe('Queue', function() {
+    let test = new Queue([1, 2, 3]);
     it('should store an array once initialized', function() {
-
-      assert.equal(true, false);
+      assert(Array.isArray(test.queue));
     });
 
     it('every element should be a POJO with value and current subsum', function() {
-      assert.equal(true, false);
+      assert.deepEqual(test.queue.map(el => el.value), [1, 2, 3]);
+      assert.deepEqual(test.queue.map(el => el.subrange_sum), [3, 2, 1]);
     });
   });
 
