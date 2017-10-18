@@ -5,6 +5,11 @@ export default class Queue {
     });
     this.current_sum = 0;
     this.total = 0;
+    this.last_seen = null;
+  }
+
+  peek() {
+    return this.last_seen;
   }
 
   dequeue() {
@@ -16,20 +21,19 @@ export default class Queue {
 
   enqueue(ele) {
     // Enqueue
-    this.queue.push({ value: ele, subrange_sum: current_sum })
+    update_current_sum(this.last_seen, ele.value);
+    this.queue.push({ value: ele, subrange_sum: this.current_sum })
+    this.total += this.current_sum
   }
 
-  window_sum() {
-    // Calculates total of all subranges
-  }
-
-  subrange_sum() {
-    // Calculates how many increasing or decreasing subranges that start
-    // at the given queue element
-  }
-
-  update() {
-    // Updates subrange sums once something is enqueued
+  update_current_sum(prev, curr) {
+    if (this.current_sum > 0 && curr > prev) {
+      this.current_sum++
+    } else if (this.current_sum < 0 && curr < prev) {
+      this.current_sum--
+    } else {
+      this.current_sum = 0;
+    }
   }
 }
 

@@ -11,7 +11,7 @@ describe('Testing', function() {
 
     it('every element should be a POJO with value and current subsum', function() {
       assert.deepEqual(test.queue.map(el => el.value), [1, 2, 3]);
-      assert.deepEqual(test.queue.map(el => el.subrange_sum), [3, 2, 1]);
+      assert.deepEqual(test.queue.map(el => el.subrange_sum), [2, 1, 0]);
     });
   });
 
